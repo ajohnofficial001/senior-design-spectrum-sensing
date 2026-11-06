@@ -61,3 +61,15 @@ Use the [experiment template](experiments/TEMPLATE.md), [contributor guidelines]
 ## License
 
 The existing generated transmitter Python file carries an SPDX GPL-3.0 notice, which is preserved. No repository-wide license has been selected; contributors should agree on licensing before redistribution of new project material.
+
+
+## Development checklist
+
+Before reporting a spectrum-sensing result, record:
+- the source of the samples (simulation or measured RF);
+- center frequency, sample rate and gain settings;
+- detector window length and threshold method;
+- the commit or configuration used to produce the result; and
+- the metric or observation used to evaluate performance.
+
+This checklist helps keep simulation results, measured RF results and future cooperative-sensing experiments reproducible and clearly separated.
