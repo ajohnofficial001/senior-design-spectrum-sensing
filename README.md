@@ -14,7 +14,11 @@ Status as of November 9, 2026. A completed simulation is not evidence of RF perf
 | Standalone detection algorithms | Pending | Extract reusable detector code and compare it with the completed simulation. |
 | Cooperative sensing | Pending | Node reports, fusion rules and multi-node evaluation are planned. |
 | Blockchain integration | Pending | Contracts, off-chain interface, deployment and end-to-end verification are planned. |
-| Automated engineering tests | Pending | Test plan exists; no executable test suite or passing CI is claimed. |
+| Automated engineering tests | Partial — Python/NumPy behavioral tests | Five simulation-block tests exist; GNU Radio scheduling/FIR integration and CI remain unverified. |
+
+## Full software-only model
+
+A new [full_simulation.grc](simulation/full_simulation.grc) extends the preserved baseline with two noisy sensing nodes, wanted-signal on/off scenarios, out-of-band interference, OR/AND fusion, metrics and a local mock ledger. See the [run guide and limitations](simulation/FULL_SIMULATION.md). Five Python/NumPy behavioral tests pass; GNU Radio compilation and runtime verification remain pending. This model does not constitute RF validation or actual blockchain integration.
 
 ## Intended system
 
@@ -50,7 +54,7 @@ For complex samples, a proposed reusable energy statistic is the mean squared ma
    ```
 4. Review the device URI and RF configuration before executing it. Running the flowgraph or Python script starts the hardware transmitter. The [transmitter guide](transmitter/README.md) explains dependencies and current settings.
 
-See [simulation run instructions](simulation/README.md) for the imported software-only flowgraph. Independent runtime reproduction is still pending. There is no receiver, cooperative service, blockchain deployment or automated test runner yet.
+See [simulation run instructions](simulation/README.md) for the imported software-only flowgraph. Independent runtime reproduction is still pending. No hardware receiver, deployed cooperative service or blockchain deployment is available. Behavioral test instructions are in the full simulation guide.
 
 ## Reproducible engineering
 

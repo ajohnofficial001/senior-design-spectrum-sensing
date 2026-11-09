@@ -1,0 +1,836 @@
+options:
+  parameters:
+    author: Senior Design team
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: Finite four-scenario simulation. No SDRs. Local mock ledger only.
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: no_gui
+    hier_block_src_path: '.:'
+    id: full_simulation
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Two-node cooperative spectrum sensing - SOFTWARE ONLY
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 16
+    - 20.0
+    rotation: 0
+    state: enabled
+blocks:
+- name: samp_rate
+  id: variable
+  parameters:
+    value: '2000000'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 24
+    - 24
+    rotation: 0
+    state: enabled
+- name: segment_samples
+  id: variable
+  parameters:
+    value: '20000'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 249
+    - 24
+    rotation: 0
+    state: enabled
+- name: cycles
+  id: variable
+  parameters:
+    value: '10'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 474
+    - 24
+    rotation: 0
+    state: enabled
+- name: tone_offset
+  id: variable
+  parameters:
+    value: '400000'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 699
+    - 24
+    rotation: 0
+    state: enabled
+- name: signal_amplitude
+  id: variable
+  parameters:
+    value: '0.0002'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 924
+    - 24
+    rotation: 0
+    state: enabled
+- name: interference_offset
+  id: variable
+  parameters:
+    value: '600000'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 24
+    - 114
+    rotation: 0
+    state: enabled
+- name: interference_amplitude
+  id: variable
+  parameters:
+    value: '0.002'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 249
+    - 114
+    rotation: 0
+    state: enabled
+- name: node2_gain
+  id: variable
+  parameters:
+    value: '0.65'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 474
+    - 114
+    rotation: 0
+    state: enabled
+- name: noise1
+  id: variable
+  parameters:
+    value: '0.001'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 699
+    - 114
+    rotation: 0
+    state: enabled
+- name: noise2
+  id: variable
+  parameters:
+    value: '0.0012'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 924
+    - 114
+    rotation: 0
+    state: enabled
+- name: seed
+  id: variable
+  parameters:
+    value: '101'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 24
+    - 204
+    rotation: 0
+    state: enabled
+- name: window_samples
+  id: variable
+  parameters:
+    value: '1000'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 249
+    - 204
+    rotation: 0
+    state: enabled
+- name: power_scale
+  id: variable
+  parameters:
+    value: '1000000'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 474
+    - 204
+    rotation: 0
+    state: enabled
+- name: threshold1
+  id: variable
+  parameters:
+    value: '0.05'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 699
+    - 204
+    rotation: 0
+    state: enabled
+- name: threshold2
+  id: variable
+  parameters:
+    value: '0.05'
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 924
+    - 204
+    rotation: 0
+    state: enabled
+- name: fusion_rule
+  id: variable
+  parameters:
+    value: '''OR'''
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 24
+    - 294
+    rotation: 0
+    state: enabled
+- name: taps
+  id: variable
+  parameters:
+    value: firdes.low_pass(1.0, samp_rate, 20000, 10000)
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 249
+    - 294
+    rotation: 0
+    state: enabled
+- name: guard_samples
+  id: variable
+  parameters:
+    value: len(taps) + window_samples
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 474
+    - 294
+    rotation: 0
+    state: enabled
+- name: output_root
+  id: variable
+  parameters:
+    value: '''simulation/generated'''
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 699
+    - 294
+    rotation: 0
+    state: enabled
+- name: run_config
+  id: variable
+  parameters:
+    value: dict(expected_samples=4*segment_samples*cycles, cycles=cycles, tone_offset=tone_offset, signal_amplitude=signal_amplitude,
+      interference_offset=interference_offset, interference_amplitude=interference_amplitude, node2_gain=node2_gain,
+      noise1=noise1, noise2=noise2, seed=seed, power_scale=power_scale, filter_taps=list(taps), noise_definition='independent
+      I/Q standard deviation', scenario_order=['noise_only','wanted','interferer_only','wanted_and_interferer'])
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 24
+    - 400
+    rotation: 0
+    state: enabled
+- name: scenario_source
+  id: epy_block
+  parameters:
+    _source_code: "# SPDX-License-Identifier: GPL-3.0\n\"\"\"Source code also embedded in full_simulation.grc;\
+      \ no device access.\"\"\"\nimport numpy as np\nfrom gnuradio import gr\n\n\nclass blk(gr.sync_block):\n\
+      \    \"\"\"Finite two-node scenario source. Ports: RX1 complex, RX2 complex, truth float.\"\"\"\n\
+      \n    def __init__(self, sample_rate=2000000, segment_samples=20000, cycles=10,\n              \
+      \   tone_offset=400000, signal_amplitude=0.0002,\n                 interference_offset=600000, interference_amplitude=0.002,\n\
+      \                 node2_gain=0.65, noise1=0.001, noise2=0.0012, seed=101):\n        gr.sync_block.__init__(self,\
+      \ name='Finite two-node scenarios', in_sig=None,\n                               out_sig=[np.complex64,\
+      \ np.complex64, np.float32])\n        if sample_rate <= 0 or segment_samples < 1 or cycles < 1:\n\
+      \            raise ValueError('Positive sample rate, segment length and cycles required')\n    \
+      \    if max(abs(tone_offset), abs(interference_offset)) >= sample_rate / 2:\n            raise ValueError('Tone\
+      \ and interference offsets must be below Nyquist')\n        if min(signal_amplitude, interference_amplitude,\
+      \ node2_gain, noise1, noise2) < 0:\n            raise ValueError('Amplitudes and gains must be nonnegative')\n\
+      \        self.fs = float(sample_rate)\n        self.segment = int(segment_samples)\n        self.total\
+      \ = self.segment * 4 * int(cycles)\n        self.offset, self.amplitude = tone_offset, signal_amplitude\n\
+      \        self.interference_offset = interference_offset\n        self.interference_amplitude = interference_amplitude\n\
+      \        self.gain2 = node2_gain\n        self.noise = (noise1, noise2)\n        self.rng = (np.random.default_rng(int(seed)),\
+      \ np.random.default_rng(int(seed) + 1))\n        self.position = 0\n\n    def work(self, input_items,\
+      \ output_items):\n        n = min(len(output_items[0]), self.total - self.position)\n        if\
+      \ n <= 0:\n            return -1\n        index = np.arange(self.position, self.position + n, dtype=np.int64)\n\
+      \        scenario = (index // self.segment) % 4\n        occupied = (scenario % 2).astype(np.float32)\n\
+      \        interferer_on = scenario >= 2\n        wanted = self.amplitude * occupied * np.exp(2j *\
+      \ np.pi * self.offset * index / self.fs)\n        unwanted = self.interference_amplitude * interferer_on\
+      \ * np.exp(\n            2j * np.pi * self.interference_offset * index / self.fs)\n        for node,\
+      \ gain in enumerate((1.0, self.gain2)):\n            # Interleaved I/Q draws give identical samples\
+      \ across scheduler chunk sizes.\n            iq = self.rng[node].standard_normal((n, 2)) * self.noise[node]\n\
+      \            output_items[node][:n] = gain * (wanted + unwanted) + iq[:, 0] + 1j * iq[:, 1]\n  \
+      \      output_items[2][:n] = occupied\n        self.position += n\n        return n\n"
+    sample_rate: samp_rate
+    segment_samples: segment_samples
+    cycles: cycles
+    tone_offset: tone_offset
+    signal_amplitude: signal_amplitude
+    interference_offset: interference_offset
+    interference_amplitude: interference_amplitude
+    node2_gain: node2_gain
+    noise1: noise1
+    noise2: noise2
+    seed: seed
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 32
+    - 560
+    rotation: 0
+    state: enabled
+    _io_cache: '(''Finite two-node scenarios'', ''blk'', [(''sample_rate'', ''2000000''), (''segment_samples'',
+      ''20000''), (''cycles'', ''10''), (''tone_offset'', ''400000''), (''signal_amplitude'', ''0.0002''),
+      (''interference_offset'', ''600000''), (''interference_amplitude'', ''0.002''), (''node2_gain'',
+      ''0.65''), (''noise1'', ''0.001''), (''noise2'', ''0.0012''), (''seed'', ''101'')], [], [(''0'',
+      ''complex'', 1), (''1'', ''complex'', 1), (''2'', ''float'', 1)], ''Finite two-node scenario source.
+      Ports: RX1 complex, RX2 complex, truth float.'', [])'
+- name: rx1_filter
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: tone_offset
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: taps
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 340
+    - 520
+    rotation: 0
+    state: enabled
+- name: rx1_filtered_mag2
+  id: blocks_complex_to_mag_squared
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 610
+    - 520
+    rotation: 0
+    state: enabled
+- name: rx1_filtered_average
+  id: blocks_moving_average_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    length: window_samples
+    max_iter: '4000'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: 1.0/window_samples
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 800
+    - 520
+    rotation: 0
+    state: enabled
+- name: rx1_filtered_scale
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: power_scale
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 1030
+    - 520
+    rotation: 0
+    state: enabled
+- name: rx1_full_mag2
+  id: blocks_complex_to_mag_squared
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 610
+    - 640
+    rotation: 0
+    state: enabled
+- name: rx1_full_average
+  id: blocks_moving_average_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    length: window_samples
+    max_iter: '4000'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: 1.0/window_samples
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 800
+    - 640
+    rotation: 0
+    state: enabled
+- name: rx1_full_scale
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: power_scale
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 1030
+    - 640
+    rotation: 0
+    state: enabled
+- name: rx2_filter
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: tone_offset
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    taps: taps
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 340
+    - 800
+    rotation: 0
+    state: enabled
+- name: rx2_filtered_mag2
+  id: blocks_complex_to_mag_squared
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 610
+    - 800
+    rotation: 0
+    state: enabled
+- name: rx2_filtered_average
+  id: blocks_moving_average_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    length: window_samples
+    max_iter: '4000'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: 1.0/window_samples
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 800
+    - 800
+    rotation: 0
+    state: enabled
+- name: rx2_filtered_scale
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: power_scale
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 1030
+    - 800
+    rotation: 0
+    state: enabled
+- name: rx2_full_mag2
+  id: blocks_complex_to_mag_squared
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 610
+    - 920
+    rotation: 0
+    state: enabled
+- name: rx2_full_average
+  id: blocks_moving_average_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    length: window_samples
+    max_iter: '4000'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: 1.0/window_samples
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 800
+    - 920
+    rotation: 0
+    state: enabled
+- name: rx2_full_scale
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: power_scale
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 1030
+    - 920
+    rotation: 0
+    state: enabled
+- name: fusion_logger
+  id: epy_block
+  parameters:
+    _source_code: "# SPDX-License-Identifier: GPL-3.0\n\"\"\"Source code also embedded in full_simulation.grc.\
+      \ Ledger is a local mock.\"\"\"\nimport csv\nimport hashlib\nimport json\nfrom pathlib import Path\n\
+      import uuid\nimport numpy as np\nfrom gnuradio import gr\n\n\nclass blk(gr.sync_block):\n    \"\"\
+      \"Window-end decisions, OR/AND fusion, metrics and hash-linked local ledger.\"\"\"\n\n    def __init__(self,\
+      \ sample_rate=2000000, segment_samples=20000,\n                 window_samples=1000, guard_samples=2000,\n\
+      \                 threshold1=0.05, threshold2=0.05, fusion_rule='OR',\n                 output_root='simulation/generated',\
+      \ config=None):\n        gr.sync_block.__init__(self, name='Fusion, metrics and MOCK ledger',\n\
+      \                               in_sig=[np.float32] * 5, out_sig=None)\n        if window_samples\
+      \ < 1 or not window_samples <= guard_samples < segment_samples:\n            raise ValueError('Require\
+      \ window <= guard < segment_samples')\n        if sample_rate <= 0 or min(threshold1, threshold2)\
+      \ < 0:\n            raise ValueError('Invalid sample rate or threshold')\n        if fusion_rule\
+      \ not in ('OR', 'AND'):\n            raise ValueError('fusion_rule must be OR or AND')\n       \
+      \ self.fs, self.segment = float(sample_rate), int(segment_samples)\n        self.window, self.guard\
+      \ = int(window_samples), int(guard_samples)\n        self.thresholds, self.rule = (threshold1, threshold2),\
+      \ fusion_rule\n        self.root, self.config = output_root, dict(config or {})\n        self.position\
+      \ = 0\n        self.counts = {name: dict(tp=0, fp=0, tn=0, fn=0)\n                       for name\
+      \ in ('rx1', 'rx2', 'OR', 'AND')}\n        self.scenarios = {str(i): {name: dict(tp=0, fp=0, tn=0,\
+      \ fn=0)\n                                  for name in self.counts} for i in range(4)}\n       \
+      \ self.previous_hash = '0' * 64\n        self.records = 0\n        self.csv_file = self.ledger_file\
+      \ = None\n        self.directory = None\n\n    def start(self):\n        # GRC introspects constructors:\
+      \ create files only when execution starts.\n        self.directory = Path(self.root) / ('full_sim_'\
+      \ + uuid.uuid4().hex)\n        self.directory.mkdir(parents=True, exist_ok=False)\n        config\
+      \ = dict(self.config, sample_rate=self.fs, segment_samples=self.segment,\n                     \
+      \ window_samples=self.window, guard_samples=self.guard,\n                      thresholds=self.thresholds,\
+      \ fusion_rule=self.rule,\n                      ledger_mode='LOCAL_MOCK_NOT_BLOCKCHAIN')\n     \
+      \   encoded = json.dumps(config, sort_keys=True, separators=(',', ':'))\n        self.config_hash\
+      \ = hashlib.sha256(encoded.encode()).hexdigest()\n        (self.directory / 'config.json').write_text(encoded\
+      \ + '\\n', encoding='utf-8')\n        self.csv_file = (self.directory / 'observations.csv').open('w',\
+      \ newline='', encoding='utf-8')\n        self.writer = csv.writer(self.csv_file)\n        self.writer.writerow(['sample_index',\
+      \ 'sample_time_s', 'scenario', 'truth',\n                              'rx1_filtered', 'rx2_filtered',\
+      \ 'rx1_full', 'rx2_full',\n                              'rx1_decision', 'rx2_decision', 'OR', 'AND',\
+      \ 'selected'])\n        self.ledger_file = (self.directory / 'mock_ledger.jsonl').open('w', encoding='utf-8')\n\
+      \        print('Simulation outputs:', self.directory)\n        return True\n\n    @staticmethod\n\
+      \    def update(counts, decision, truth):\n        key = ('tp' if truth else 'fp') if decision else\
+      \ ('fn' if truth else 'tn')\n        counts[key] += 1\n\n    def work(self, input_items, output_items):\n\
+      \        n = len(input_items[0])\n        # Input order: filtered RX1/RX2, unfiltered RX1/RX2, ideal\
+      \ truth.\n        for local in range((-self.position + self.window - 1) % self.window, n, self.window):\n\
+      \            index = self.position + local\n            if index % self.segment < self.guard:\n\
+      \                continue  # Exclude FIR/window transients after every scenario change.\n      \
+      \      powers = [float(stream[local]) for stream in input_items[:4]]\n            if not np.all(np.isfinite(powers)):\n\
+      \                raise ValueError('Nonfinite power observation')\n            truth = int(input_items[4][local]\
+      \ >= 0.5)\n            decisions = [int(powers[i] > self.thresholds[i]) for i in range(2)]\n   \
+      \         either, both = int(any(decisions)), int(all(decisions))\n            scenario = (index\
+      \ // self.segment) % 4\n            for name, decision in zip(self.counts, decisions + [either,\
+      \ both]):\n                self.update(self.counts[name], decision, truth)\n                self.update(self.scenarios[str(scenario)][name],\
+      \ decision, truth)\n            selected = either if self.rule == 'OR' else both\n            self.writer.writerow([index,\
+      \ index / self.fs, scenario, truth,\n                                  *powers, *decisions, either,\
+      \ both, selected])\n            record = dict(sequence=self.records, sample_index=index, truth=truth,\n\
+      \                          scenario=int(scenario), powers=powers, decisions=decisions,\n       \
+      \                   fusion_rule=self.rule, fused=selected, config_sha256=self.config_hash,\n   \
+      \                       previous_hash=self.previous_hash, mode='LOCAL_MOCK_NOT_BLOCKCHAIN')\n  \
+      \          canonical = json.dumps(record, sort_keys=True, separators=(',', ':'))\n            self.previous_hash\
+      \ = hashlib.sha256(canonical.encode()).hexdigest()\n            record['hash'] = self.previous_hash\n\
+      \            self.ledger_file.write(json.dumps(record, sort_keys=True) + '\\n')\n            self.records\
+      \ += 1\n        self.position += n\n        return n\n\n    @staticmethod\n    def metrics(counts):\n\
+      \        tp, fp, tn, fn = (counts[k] for k in ('tp', 'fp', 'tn', 'fn'))\n        return dict(counts,\
+      \ probability_detection=tp / (tp + fn) if tp + fn else None,\n                    probability_false_alarm=fp\
+      \ / (fp + tn) if fp + tn else None)\n\n    def stop(self):\n        if self.directory is not None:\n\
+      \            expected = int(self.config.get('expected_samples', 0))\n            summary = dict(samples_consumed=self.position,\
+      \ expected_samples=expected,\n                           completed=(self.position == expected) if\
+      \ expected else None,\n                           observations=self.records, final_mock_hash=self.previous_hash,\n\
+      \                           metrics={k: self.metrics(v) for k, v in self.counts.items()},\n    \
+      \                       per_scenario={s: {k: self.metrics(v) for k, v in nodes.items()}\n      \
+      \                                   for s, nodes in self.scenarios.items()},\n                 \
+      \          limitations=['Simulation only; no RF validation',\n                                 \
+      \       'Ideal synchronized reporting, no packet loss or network model',\n                     \
+      \                   'Local hash chain, no consensus, contract or blockchain network',\n        \
+      \                                'Window observations overlap in filter memory; no confidence intervals'])\n\
+      \            (self.directory / 'summary.json').write_text(json.dumps(summary, indent=2) + '\\n',\
+      \ encoding='utf-8')\n            self.csv_file.close()\n            self.ledger_file.close()\n \
+      \       return True\n"
+    sample_rate: samp_rate
+    segment_samples: segment_samples
+    window_samples: window_samples
+    guard_samples: guard_samples
+    threshold1: threshold1
+    threshold2: threshold2
+    fusion_rule: fusion_rule
+    output_root: output_root
+    config: run_config
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate:
+    - 1300
+    - 680
+    rotation: 0
+    state: enabled
+    _io_cache: ('Fusion, metrics and MOCK ledger', 'blk', [('sample_rate', '2000000'), ('segment_samples',
+      '20000'), ('window_samples', '1000'), ('guard_samples', '2000'), ('threshold1', '0.05'), ('threshold2',
+      '0.05'), ('fusion_rule', "'OR'"), ('output_root', "'simulation/generated'"), ('config', 'None')],
+      [('0', 'float', 1), ('1', 'float', 1), ('2', 'float', 1), ('3', 'float', 1), ('4', 'float', 1)],
+      [], 'Window-end decisions, OR/AND fusion, metrics and hash-linked local ledger.', [])
+connections:
+- - scenario_source
+  - '0'
+  - rx1_filter
+  - '0'
+- - rx1_filter
+  - '0'
+  - rx1_filtered_mag2
+  - '0'
+- - rx1_filtered_mag2
+  - '0'
+  - rx1_filtered_average
+  - '0'
+- - rx1_filtered_average
+  - '0'
+  - rx1_filtered_scale
+  - '0'
+- - rx1_filtered_scale
+  - '0'
+  - fusion_logger
+  - '0'
+- - scenario_source
+  - '0'
+  - rx1_full_mag2
+  - '0'
+- - rx1_full_mag2
+  - '0'
+  - rx1_full_average
+  - '0'
+- - rx1_full_average
+  - '0'
+  - rx1_full_scale
+  - '0'
+- - rx1_full_scale
+  - '0'
+  - fusion_logger
+  - '2'
+- - scenario_source
+  - '1'
+  - rx2_filter
+  - '0'
+- - rx2_filter
+  - '0'
+  - rx2_filtered_mag2
+  - '0'
+- - rx2_filtered_mag2
+  - '0'
+  - rx2_filtered_average
+  - '0'
+- - rx2_filtered_average
+  - '0'
+  - rx2_filtered_scale
+  - '0'
+- - rx2_filtered_scale
+  - '0'
+  - fusion_logger
+  - '1'
+- - scenario_source
+  - '1'
+  - rx2_full_mag2
+  - '0'
+- - rx2_full_mag2
+  - '0'
+  - rx2_full_average
+  - '0'
+- - rx2_full_average
+  - '0'
+  - rx2_full_scale
+  - '0'
+- - rx2_full_scale
+  - '0'
+  - fusion_logger
+  - '3'
+- - scenario_source
+  - '2'
+  - fusion_logger
+  - '4'
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0
