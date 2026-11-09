@@ -1,0 +1,7 @@
+{
+  "source": "User-uploaded first completed GNU Radio simulation run",
+  "original_observations_sha256": "e1cd2a3b0ba16d3f7c1d147f808f673727cddecea490bd536db965d22816fb52",
+  "original_summary_sha256": "932da645251314819a5b60be5079cf91b4f011be4016f0e82efdfc27d98a2778",
+  "selection": "Only scenario 0, truth 0; five columns retained",
+  "heldout_evaluation_status": "pending; do not use original run as independent test"
+}
