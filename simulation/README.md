@@ -1,5 +1,7 @@
 # GNU Radio energy-detection simulation
 
+For the new two-node, finite software-only model, see [full_simulation.grc](full_simulation.grc) and its [guide](FULL_SIMULATION.md). The original imported baseline below is preserved.
+
 **Completed by the team; source imported November 9, 2026. Independent runtime reproduction remains pending.**
 
 - [senior_flowchart.grc](senior_flowchart.grc): editable GNU Radio Companion source.
