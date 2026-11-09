@@ -16,7 +16,7 @@ Treat .grc as the editable flowgraph source. Commit its generated Python compani
 
 ## Evidence and status
 
-Use “completed” only for work with stated scope. The team reports the GNU Radio energy-detection simulation complete, but its reproducible artifacts still need uploading. RF validation, cooperative sensing and blockchain integration remain pending until supported by recorded checks. Avoid invented results, unmeasured performance claims or placeholders presented as implemented code.
+Use “completed” only for work with stated scope. The team reports the GNU Radio energy-detection simulation complete, and its source is archived in simulation/; independent reproduction, plots and executed run records remain pending. RF validation, cooperative sensing and blockchain integration remain pending until supported by recorded checks. Avoid invented results, unmeasured performance claims or placeholders presented as implemented code.
 
 For simulations, record seeds, signal/noise configuration, detector settings and software versions. For RF trials, also record hardware, gains, tuning, sample rate, calibration and ground truth. Use [the experiment template](experiments/TEMPLATE.md).
 

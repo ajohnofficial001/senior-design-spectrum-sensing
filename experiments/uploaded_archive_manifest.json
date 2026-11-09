@@ -1,0 +1,69 @@
+{
+  "archive": "Senior_Design-20261109T222557Z-1-001.zip",
+  "archive_sha256": "e72e2153ef1bb8ba211d2d172e7c46b561f1429b01db624f59fece4a9c248d8e",
+  "files": [
+    {
+      "archive_path": "Senior_Design/filtered_power.f32",
+      "size_bytes": 347836,
+      "sha256": "2949d512d28098254cfe8b33433642d22a05310ab5692c71a800497e24e3f98a",
+      "repository_path": null,
+      "disposition": "binary retained in original uploaded archive; not committed"
+    },
+    {
+      "archive_path": "Senior_Design/full_power.f32",
+      "size_bytes": 347984,
+      "sha256": "9dcdf14b3fddd23062eff1c696a628ccb22750c0e045c1ee0ff8f5704f94ce1c",
+      "repository_path": null,
+      "disposition": "binary retained in original uploaded archive; not committed"
+    },
+    {
+      "archive_path": "Senior_Design/rx1_200k.c64",
+      "size_bytes": 1600000,
+      "sha256": "b27aa999322cec38c683194cde7e20a03dbd9789cb84506760f682e1e72df23c",
+      "repository_path": null,
+      "disposition": "binary retained in original uploaded archive; not committed"
+    },
+    {
+      "archive_path": "Senior_Design/rx1_400k.c64",
+      "size_bytes": 1600000,
+      "sha256": "e0c88567f6133b9ecf4356688b2c8e8e72fb14a8d906161b6ad04baee77e1e13",
+      "repository_path": null,
+      "disposition": "binary retained in original uploaded archive; not committed"
+    },
+    {
+      "archive_path": "Senior_Design/rx1_600k.c64",
+      "size_bytes": 1600000,
+      "sha256": "8094578a5154f4da51bf7bac6191d7a06d78bd61158803858b5668ca8dd28e2f",
+      "repository_path": null,
+      "disposition": "binary retained in original uploaded archive; not committed"
+    },
+    {
+      "archive_path": "Senior_Design/rx1_tx_off.c64",
+      "size_bytes": 1600000,
+      "sha256": "6ec886c8152b08f46029f381629b5eb365449c6fc4302df7907a99159f0c60ff",
+      "repository_path": null,
+      "disposition": "binary retained in original uploaded archive; not committed"
+    },
+    {
+      "archive_path": "Senior_Design/rx2_tx_off.c64",
+      "size_bytes": 1600000,
+      "sha256": "40a91e41f7876d2d309863bc12315712f7b8d4871ad5aba272ea42f10a0567c4",
+      "repository_path": null,
+      "disposition": "binary retained in original uploaded archive; not committed"
+    },
+    {
+      "archive_path": "Senior_Design/senior_flowchart.grc",
+      "size_bytes": 14704,
+      "sha256": "c8d074be1e479a0a6bc0af403cd63d3aa74b66a6bd3c88886ab4cc78f32bef4a",
+      "repository_path": "simulation/senior_flowchart.grc",
+      "disposition": "source imported; output paths made relative"
+    },
+    {
+      "archive_path": "Senior_Design/senior_flowchart.py",
+      "size_bytes": 13308,
+      "sha256": "34a3f1de7107ab4d4064b5485f1ec3e54ed8a850bb639e66be2401ca71125cd8",
+      "repository_path": "simulation/senior_flowchart.py",
+      "disposition": "source imported; output paths made relative"
+    }
+  ]
+}

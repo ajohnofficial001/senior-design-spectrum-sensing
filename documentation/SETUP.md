@@ -20,4 +20,4 @@ Once the controlled RF setup is ready, running `python3 transmitter/primary_tx.p
 
 ## Other subsystems
 
-Completed simulation artifacts still need committing before reproducible simulation instructions can be provided. Receiver, cooperative and blockchain dependencies will be documented with their implementations. Record tested versions and device configuration in each experiment.
+The imported simulation source and launch procedure are documented in [simulation](../simulation/README.md). It requires GNU Radio 3.10.12.0-compatible Python, filter/analog/blocks/Qt GUI modules, PyQt5 and sip with a graphical session; its active path needs no SDR hardware. Runtime reproduction remains pending. Receiver, cooperative and blockchain dependencies will be documented with their implementations. Record tested versions and device configuration in each experiment.

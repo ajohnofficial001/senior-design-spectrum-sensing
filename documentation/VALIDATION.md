@@ -2,7 +2,7 @@
 
 ## Simulation baseline
 
-Archive the completed GNU Radio energy-detection simulation and record its environment, signal/noise model, seed, window, threshold and outputs. Reproduce it independently before using it as a regression baseline.
+The completed simulation source is archived in [simulation](../simulation/README.md), with source-derived settings and an upload manifest. Record a tested environment, actual outputs and an executed experiment record. Reproduce it independently before using it as a regression baseline.
 
 ## RF validation — pending
 
