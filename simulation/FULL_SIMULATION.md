@@ -85,6 +85,14 @@ This models gain differences and AWGN, not a complete propagation channel: fadin
 
 ## Verification status
 
+### GRC generation troubleshooting
+
+If an older copy generates `SyntaxError: expression cannot contain assignment` with a line containing `self.cycles=self.cycles`, update `full_simulation.grc` and regenerate. The `run_config` variable now uses a dictionary literal with quoted keys. GRC 3.10 rewrites variable names inside keyword arguments such as `dict(cycles=cycles)`, producing invalid Python in generated setters. Do not fix only the generated Python: the next generation would overwrite that edit.
+
+The generic no-flow-control/throttle warning is separate. This finite batch simulation intentionally runs faster than wall time and stops at end-of-stream; a throttle is not needed to fix the syntax error. Close other heavy applications if CPU use is inconvenient.
+
+Code-generation regression checks require PyYAML as well as NumPy. Run `python3 -m unittest discover -s tests -p 'test_*.py' -v` for all seven behavioral/expression tests. They do not substitute for GNU Radio execution.
+
 Python/NumPy behavioral tests exercise deterministic source generation, scenario truth, guard exclusion, fusion metrics, completion reporting and mock-ledger hashes:
 
 ```bash

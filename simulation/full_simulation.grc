@@ -303,10 +303,12 @@ blocks:
 - name: run_config
   id: variable
   parameters:
-    value: dict(expected_samples=4*segment_samples*cycles, cycles=cycles, tone_offset=tone_offset, signal_amplitude=signal_amplitude,
-      interference_offset=interference_offset, interference_amplitude=interference_amplitude, node2_gain=node2_gain,
-      noise1=noise1, noise2=noise2, seed=seed, power_scale=power_scale, filter_taps=list(taps), noise_definition='independent
-      I/Q standard deviation', scenario_order=['noise_only','wanted','interferer_only','wanted_and_interferer'])
+    value: '{''expected_samples'': 4 * segment_samples * cycles, ''cycles'': cycles, ''tone_offset'':
+      tone_offset, ''signal_amplitude'': signal_amplitude, ''interference_offset'': interference_offset,
+      ''interference_amplitude'': interference_amplitude, ''node2_gain'': node2_gain, ''noise1'': noise1,
+      ''noise2'': noise2, ''seed'': seed, ''power_scale'': power_scale, ''filter_taps'': list(taps), ''noise_definition'':
+      ''independent I/Q standard deviation'', ''scenario_order'': [''noise_only'', ''wanted'', ''interferer_only'',
+      ''wanted_and_interferer'']}'
     comment: ''
   states:
     bus_sink: false
