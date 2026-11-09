@@ -52,3 +52,7 @@ blockchain/artifacts/
 blockchain/cache/
 blockchain/out/
 blockchain/broadcast/
+
+# Binary sample and power streams (inventory in experiments/)
+*.c64
+*.f32

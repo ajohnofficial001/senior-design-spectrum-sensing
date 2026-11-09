@@ -4,11 +4,11 @@ Collaborative engineering repository for GNU Radio spectrum sensing, with planne
 
 ## Project status
 
-Status as of November 6, 2026. A completed simulation is not evidence of RF performance.
+Status as of November 9, 2026. A completed simulation is not evidence of RF performance.
 
 | Workstream | Status | Evidence and limitations |
 | --- | --- | --- |
-| GNU Radio energy-detection simulation | Completed — team reported | Simulation flowgraphs, settings, plots and run records have not yet been committed. Reproduction from this repository is pending. |
+| GNU Radio energy-detection simulation | Completed — team reported | [Flowgraph and generated Python](simulation/README.md) imported from the team archive; settings documented. Independent reproduction, labeled plots and run records remain pending. |
 | GNU Radio transmitter | Existing implementation preserved | [Flowgraph](transmitter/primary_tx.grc) and [generated Python](transmitter/primary_tx.py); hardware operation has not been validated by this repository update. |
 | Receiver and RF validation | Pending | Receiver implementation, calibration, captured RF data and measured detection performance remain to be documented and validated. |
 | Standalone detection algorithms | Pending | Extract reusable detector code and compare it with the completed simulation. |
@@ -20,7 +20,7 @@ Status as of November 6, 2026. A completed simulation is not evidence of RF perf
 
 The planned pipeline is: controlled transmitter → SDR receiver → local energy detector → cooperative fusion → off-chain submission → blockchain record. The completed simulation covers energy detection in a simulated environment; it does not establish completion of this entire pipeline.
 
-For complex samples, a proposed reusable energy statistic is the mean squared magnitude over a window: E = sum(|x[n]|²) / N. A threshold produces an occupancy decision. The exact normalization, window length, threshold calibration and units used in the completed simulation must be recorded before comparisons are made. Energy detection indicates occupancy; it does not by itself identify an interferer or prove malicious activity.
+For complex samples, a proposed reusable energy statistic is the mean squared magnitude over a window: E = sum(|x[n]|²) / N. A threshold produces an occupancy decision. The imported flowgraph uses a 1,000-sample moving mean of squared magnitude, scaled by 1,000,000, with threshold 0.05 on the filtered branch. See [simulation settings](simulation/README.md); threshold calibration remains pending. Energy detection indicates occupancy; it does not by itself identify an interferer or prove malicious activity.
 
 ## Repository map
 
@@ -50,7 +50,7 @@ For complex samples, a proposed reusable energy statistic is the mean squared ma
    ```
 4. Review the device URI and RF configuration before executing it. Running the flowgraph or Python script starts the hardware transmitter. The [transmitter guide](transmitter/README.md) explains dependencies and current settings.
 
-There is no simulation run command yet: its completed artifacts are not present. There is no receiver, cooperative service, blockchain deployment or automated test runner yet.
+See [simulation run instructions](simulation/README.md) for the imported software-only flowgraph. Independent runtime reproduction is still pending. There is no receiver, cooperative service, blockchain deployment or automated test runner yet.
 
 ## Reproducible engineering
 

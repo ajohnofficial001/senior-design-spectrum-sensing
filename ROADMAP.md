@@ -7,8 +7,10 @@ This is a dependency-based plan; owners and dates should be assigned in team iss
 - [x] Preserve existing GNU Radio transmitter flowgraph and generated Python.
 - [x] Establish subsystem folders, contributor workflow and experiment documentation.
 - [x] GNU Radio energy-detection simulation completed (team reported).
-- [ ] Commit the completed simulation flowgraphs, generated code, exact settings and plots.
-- [ ] Record environment versions and a reproducible simulation procedure.
+- [x] Import simulation flowgraph and generated code; document settings and archive checksums.
+- [ ] Add labeled simulation plots and an executed run record.
+- [x] Record source GNU Radio version and simulation launch procedure.
+- [ ] Verify the documented procedure on the team environment and record all dependency versions.
 - [ ] Have another teammate reproduce the simulation and attach a run record.
 
 Exit evidence: a fresh checkout can reproduce the documented simulation. This gate does not imply RF validation.
