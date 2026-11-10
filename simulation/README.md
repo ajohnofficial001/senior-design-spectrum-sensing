@@ -1,5 +1,7 @@
 # GNU Radio energy-detection simulation
 
+Next: [stress the frozen detector](STRESS_EXPERIMENTS.md) under changing noise, block fading and missing reports; no thresholds are refitted.
+
 After the window comparison, run the [frozen 4,000-sample confirmation study](FROZEN_CONFIRMATION.md) on untouched seeds without recalibrating thresholds.
 
 Next study: [longer averaging-window experiments](WINDOW_EXPERIMENTS.md), with separate calibration for 1,000, 2,000 and 4,000 samples and fresh evaluation seeds.
