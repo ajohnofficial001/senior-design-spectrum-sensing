@@ -6,11 +6,12 @@ from .scenario_source import blk as BaselineSource
 class blk(BaselineSource):
     def __init__(self, sample_rate=2000000, segment_samples=20000, cycles=100,
                  signal_amplitude=0.0002, seed=50001, noise_factor=1.0,
-                 noise_step=False, fading=False):
+                 noise_step=False, fading=False, reference_tone_amplitude=0.0):
         super().__init__(sample_rate=sample_rate, segment_samples=segment_samples,
                          cycles=cycles, signal_amplitude=signal_amplitude, seed=seed)
         if noise_factor <= 0:
             raise ValueError('noise_factor must be positive')
+        self.reference_tone_amplitude = float(reference_tone_amplitude)
         self.noise_factor = float(noise_factor)
         self.noise_step = bool(noise_step)
         self.fading = bool(fading)
@@ -30,6 +31,7 @@ class blk(BaselineSource):
         wanted = self.amplitude * truth * np.exp(2j * np.pi * self.offset * index / self.fs)
         interferer = self.interference_amplitude * (scenario >= 2) * np.exp(
             2j * np.pi * self.interference_offset * index / self.fs)
+        interferer += self.reference_tone_amplitude * np.exp(2j * np.pi * 490000 * index / self.fs)
         # Alternate noise amplitude by complete cycle; occupancy remains balanced.
         noise_scale = (np.where((segments // 4) % 2 == 0, .8, 1.2)
                        if self.noise_step else np.ones(n)) * self.noise_factor
