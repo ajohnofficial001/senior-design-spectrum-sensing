@@ -104,8 +104,13 @@ def run_flowgraph(output_root, seed, cycles, thresholds, amplitude_factor, metad
                   scenario_order=['noise_only', 'wanted', 'interferer_only', 'wanted_and_interferer'],
                   python_version=sys.version, gnuradio_version=gr.version(), **metadata)
     tb = gr.top_block('Multiseed software-only calibration experiment')
-    source = ScenarioSource(sample_rate=fs, segment_samples=segment, cycles=cycles,
-                            signal_amplitude=amplitude, seed=seed)
+    source_type = ScenarioSource
+    stress = metadata.get("channel_stress", {})
+    if stress:
+        from full_simulation_blocks.stress_source import blk as StressSource
+        source_type = StressSource
+    source = source_type(sample_rate=fs, segment_samples=segment, cycles=cycles,
+                         signal_amplitude=amplitude, seed=seed, **stress)
     logger = FusionLogger(sample_rate=fs, segment_samples=segment, window_samples=window,
                           guard_samples=len(taps) + window, threshold1=thresholds[0],
                           threshold2=thresholds[1], output_root=str(output_root), config=config)
