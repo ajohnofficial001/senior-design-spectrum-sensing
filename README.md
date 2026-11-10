@@ -14,7 +14,11 @@ Status as of November 10, 2026. A completed simulation is not evidence of RF per
 | Standalone detection algorithms | Pending | Extract reusable detector code and compare it with the completed simulation. |
 | Cooperative sensing | Software protocol pilot executed | [Signed-report and timing study](cooperative_sensing/TRUST_STUDY.md): five virtual identities, 60 synthetic-trace runs; GNU Radio report integration and RF validation pending. |
 | Blockchain integration | Pending | Contracts, off-chain interface, deployment and end-to-end verification are planned. |
-| Automated engineering tests | 46 tests passed in authoring environment | Behavioral, experiment-runner and signed-report checks; GNU Radio scheduling/FIR integration and Windows execution remain unverified. |
+| Automated engineering tests | 52 tests passed in authoring environment | Behavioral, experiment-runner and signed-report checks; GNU Radio scheduling/FIR integration and Windows execution remain unverified. |
+
+## Signed detector integration
+
+The [signed detector adapter](cooperative_sensing/SIGNED_DETECTOR.md) connects exported GNU Radio spectral features to authenticated reports using the frozen original thresholds and two-node OR policy. It compares clean, altered, replayed, delayed and missing reports. Run `simulation/RUN_SIGNED_DETECTOR_WINDOWS.bat` on the team laptop, or follow the prompt commands in the guide. Numerical integration tests pass; native acquisition and Windows execution remain pending.
 
 ## Report integrity and health pilot
 
