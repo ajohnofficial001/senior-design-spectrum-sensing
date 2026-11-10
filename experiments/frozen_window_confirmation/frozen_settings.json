@@ -1,0 +1,39 @@
+{
+  "window_samples": 4000,
+  "thresholds": [
+    0.04487484693527222,
+    0.06522393226623535
+  ],
+  "comparator": ">",
+  "fusion_rule": "OR",
+  "sample_rate": 2000000,
+  "selection_basis": "Selected after reviewing completed window-length study; confirmation uses untouched seeds without refitting",
+  "source_window_summary_sha256": "183fcd71cd91e9c920d4e2680505a0eae088a29a2f9b1cd49733216cf6d13c08",
+  "source_substudy_summary_sha256": "53ebacc6788dd2663775457421052767adf99149695b1306b377ceb26b860ad2",
+  "reference_metrics": {
+    "0.5": {
+      "tp": 1597,
+      "fp": 111,
+      "tn": 2289,
+      "fn": 803,
+      "probability_detection": 0.6654166666666667,
+      "probability_false_alarm": 0.04625
+    },
+    "1.0": {
+      "tp": 2400,
+      "fp": 111,
+      "tn": 2289,
+      "fn": 0,
+      "probability_detection": 1.0,
+      "probability_false_alarm": 0.04625
+    },
+    "2.0": {
+      "tp": 2400,
+      "fp": 111,
+      "tn": 2289,
+      "fn": 0,
+      "probability_detection": 1.0,
+      "probability_false_alarm": 0.04625
+    }
+  }
+}
