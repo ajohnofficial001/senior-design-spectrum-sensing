@@ -1,0 +1,11 @@
+{
+  "method": "reference_8000",
+  "thresholds": [
+    1.291901545099042,
+    1.3172280668473808
+  ],
+  "window_samples": 8000,
+  "source_summary_sha256": "d1217806caca8ed916da9dafa16f0347aaf9fbbdc3d49d69c2351480cc19324f",
+  "source_calibration_sha256": "f43e68ace6e2f965efc98bd5369b4bdcc326544c16d55a6c1e93b49377a3fea4",
+  "policy": "Confirm frozen original algorithm and thresholds; fallback is a distinct separately trained redesign"
+}
