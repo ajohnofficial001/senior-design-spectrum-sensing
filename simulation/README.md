@@ -1,5 +1,7 @@
 # GNU Radio energy-detection simulation
 
+After the window comparison, run the [frozen 4,000-sample confirmation study](FROZEN_CONFIRMATION.md) on untouched seeds without recalibrating thresholds.
+
 Next study: [longer averaging-window experiments](WINDOW_EXPERIMENTS.md), with separate calibration for 1,000, 2,000 and 4,000 samples and fresh evaluation seeds.
 
 For the new two-node, finite software-only model, see [full_simulation.grc](full_simulation.grc) and its [guide](FULL_SIMULATION.md). The original imported baseline below is preserved.
