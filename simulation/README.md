@@ -1,5 +1,7 @@
 # GNU Radio energy-detection simulation
 
+Next study: [longer averaging-window experiments](WINDOW_EXPERIMENTS.md), with separate calibration for 1,000, 2,000 and 4,000 samples and fresh evaluation seeds.
+
 For the new two-node, finite software-only model, see [full_simulation.grc](full_simulation.grc) and its [guide](FULL_SIMULATION.md). The original imported baseline below is preserved.
 
 After the first completed run, separate node thresholds were fitted using noise-only observations. Use [full_simulation_calibrated.grc](full_simulation_calibrated.grc) for a fresh-seed evaluation and follow the [calibration guide](THRESHOLD_CALIBRATION.md). The first independent-seed run completed; it showed a detection/false-alarm tradeoff summarized in the multiseed guide.

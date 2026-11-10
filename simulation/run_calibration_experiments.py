@@ -89,7 +89,10 @@ def run_flowgraph(output_root, seed, cycles, thresholds, amplitude_factor, metad
     from full_simulation_blocks.scenario_source import blk as ScenarioSource
     from full_simulation_blocks.fusion_logger import blk as FusionLogger
 
-    fs, segment, window, power_scale = 2000000, 20000, 1000, 1000000
+    fs, segment, power_scale = 2000000, 20000, 1000000
+    window = int(metadata.get("averaging_window_samples", 1000))
+    if window not in (1000, 2000, 4000):
+        raise ValueError("Supported study windows: 1000, 2000, 4000")
     taps = firdes.low_pass(1.0, fs, 20000, 10000)
     amplitude = 0.0002 * amplitude_factor
     config = dict(expected_samples=4 * segment * cycles, cycles=cycles,
@@ -137,14 +140,15 @@ def run_flowgraph(output_root, seed, cycles, thresholds, amplitude_factor, metad
     return logger.directory, rows
 
 
-def run_study(output_root, cycles):
-    assert_seed_separation(CALIBRATION_SEEDS, EVALUATION_SEEDS)
+def run_study(output_root, cycles, window_samples=1000,
+              calibration_seeds=CALIBRATION_SEEDS, evaluation_seeds=EVALUATION_SEEDS):
+    assert_seed_separation(calibration_seeds, evaluation_seeds)
     study_id = 'multiseed_' + uuid.uuid4().hex
     root = Path(output_root) / study_id
     root.mkdir(parents=True, exist_ok=False)
-    plan = dict(study_id=study_id, cycles_per_run=cycles,
-                calibration_source_seeds=CALIBRATION_SEEDS,
-                evaluation_source_seeds=EVALUATION_SEEDS,
+    plan = dict(study_id=study_id, cycles_per_run=cycles, averaging_window_samples=window_samples,
+                calibration_source_seeds=calibration_seeds,
+                evaluation_source_seeds=evaluation_seeds,
                 node_targets=NODE_TARGETS, selected_node_target=SELECTED_NODE_TARGET,
                 amplitude_factors=AMPLITUDE_FACTORS,
                 baseline_signal_amplitude=0.0002,
@@ -157,10 +161,10 @@ def run_study(output_root, cycles):
     print('STUDY DIRECTORY:', root.resolve(), flush=True)
     calibration_runs, calibration_provenance = [], []
     try:
-        for index, seed in enumerate(CALIBRATION_SEEDS, 1):
+        for index, seed in enumerate(calibration_seeds, 1):
             print(f'Calibration {index}/5: seed={seed}', flush=True)
             directory, rows = run_flowgraph(root / 'calibration', seed, cycles, (.05, .05), 1.0,
-                                            dict(study_id=study_id, phase='calibration'))
+                                            dict(study_id=study_id, phase='calibration', averaging_window_samples=window_samples))
             calibration_runs.append(rows)
             calibration_provenance.append(dict(seed=seed, directory=str(directory.relative_to(root)),
                                                 config_sha256=sha256(directory / 'config.json'),
@@ -178,10 +182,10 @@ def run_study(output_root, cycles):
         pooled = {str(factor): {label: empty_counts() for label in candidates}
                   for factor in AMPLITUDE_FACTORS}
         for factor in AMPLITUDE_FACTORS:
-            for seed in EVALUATION_SEEDS:
+            for seed in evaluation_seeds:
                 print(f'Evaluation: amplitude factor={factor}, seed={seed}', flush=True)
                 directory, rows = run_flowgraph(root / 'evaluation', seed, cycles, selected, factor,
-                    dict(study_id=study_id, phase='evaluation', calibration_sha256=artifact_hash))
+                    dict(study_id=study_id, phase='evaluation', averaging_window_samples=window_samples, calibration_sha256=artifact_hash))
                 comparison = evaluate_candidates(rows, candidates)
                 for label, counts in comparison.items():
                     add_counts(pooled[str(factor)][label], counts)
@@ -195,7 +199,7 @@ def run_study(output_root, cycles):
                                   for s in range(4)})
                 results.append(result)
                 write_json(root / 'evaluation_progress.json', results)
-        report = dict(study_id=study_id, completed=True, calibration_sha256=artifact_hash,
+        report = dict(study_id=study_id, completed=True, averaging_window_samples=window_samples, calibration_sha256=artifact_hash,
                       selected_node_target=SELECTED_NODE_TARGET, selected_thresholds=selected,
                       calibration_noise_counts={n: fitted[str(SELECTED_NODE_TARGET)][n]['noise_observations']
                                                 for n in ('rx1', 'rx2')},
