@@ -45,7 +45,8 @@ def spectral_features(samples, fs=2000000):
                                  (460000, 490000), (490000, 520000))]
     floor = max(float(np.median(references)), np.finfo(float).tiny)
     spread = max(references) / max(min(references), np.finfo(float).tiny)
-    return dict(score=target / floor, noise_reference=floor, reference_spread=spread,
+    return dict(score=target / floor, target_power=target, reference_sectors=references,
+                noise_reference=floor, reference_spread=spread,
                 reliable=bool(spread <= 4 and floor > np.finfo(float).tiny))
 
 

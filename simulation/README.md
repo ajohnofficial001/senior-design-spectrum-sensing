@@ -1,5 +1,7 @@
 # GNU Radio energy-detection simulation
 
+Next: [confirm the frozen 8,000-sample noise-aware detector and test a reference-sector fallback](REFERENCE_CONFIRMATION.md) on untouched seeds.
+
 Experimental redesign: [noise-aware reference-band thresholding and longer listening](NOISE_AWARE_EXPERIMENTS.md), with the confirmed frozen detector retained as a parallel baseline.
 
 Next: [stress the frozen detector](STRESS_EXPERIMENTS.md) under changing noise, block fading and missing reports; no thresholds are refitted.
