@@ -9,3 +9,7 @@ Compare candidate fusion methods using reproducible inputs. Specify missing-node
 ## Executable trust-layer pilot
 
 See [study, results, threat model and run instructions](TRUST_STUDY.md). This adds signed synthetic reports and health monitoring; integration with the existing GNU Radio detector is pending.
+
+## Detector integration
+
+[Run the signed detector experiment](SIGNED_DETECTOR.md) against a fresh GNU Radio acquisition or existing spectral-feature exports. Original two-node OR behavior and reference-quality abstentions are preserved; transport and ledger receipts are simulated.
