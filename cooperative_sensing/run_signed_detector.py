@@ -85,7 +85,7 @@ def evidence_quality(report, evidence, threshold):
         return 'evidence_inconsistent'
 
 
-def process(rows, settings, provenance, case, keys=None):
+def process(rows, settings, provenance, case, keys=None, delivery=None, delivery_policy=None):
     if case not in CASES or not rows:
         raise ValueError('Unknown case or empty input')
     keys = keys or [Ed25519PrivateKey.generate() for _ in range(2)]
@@ -93,6 +93,16 @@ def process(rows, settings, provenance, case, keys=None):
                   fusion='two-node OR, both valid required', freshness_seconds=.012,
                   transport='simulated receiver delay, not wall-clock measurement',
                   input_hashes=provenance['files'], frozen_artifact_sha256=sha(ARTIFACT))
+    if delivery is not None:
+        if case != 'clean':
+            raise ValueError('Custom delivery cannot be mixed with legacy injections')
+        if set(delivery) != {(s, n) for s in range(len(rows)) for n in range(2)}:
+            raise ValueError('Delivery schedule must cover every frame and node')
+        if any(d is not None and (type(d) not in (int, float) or not math.isfinite(d) or d < 0)
+               for d in delivery.values()):
+            raise ValueError('Delivery delays must be finite nonnegative seconds or None')
+        policy['delivery_policy'] = delivery_policy
+        policy['delivery_schedule_sha256'] = digest([[s,n,delivery[s,n]] for s,n in sorted(delivery)])
     config_hash = digest(policy)
     validator = Validator(config_hash, max_age=.012)
     for node in range(2):
@@ -114,14 +124,21 @@ def process(rows, settings, provenance, case, keys=None):
             envelope = sign_report(report, keys[node])
             # Predefined sparse injections; no truth or scenario consulted.
             injected = node == 0 and sequence % 10 == 5 and case != 'clean'
+            if delivery is not None:
+                delay = delivery[sequence, node]
+                if delay is None:
+                    dropped += 1
+                    continue
+                injected = delay != .0005
             if injected and case == 'drop':
                 dropped += 1
                 continue
             if injected and case == 'tamper':
                 envelope['report']['vote'] = 1 - report['vote']
-            received_at = timestamp + (.020 if injected and case == 'delay' else .0005)
+            received_at = timestamp + (delay if delivery is not None else
+                                       (.020 if injected and case == 'delay' else .0005))
             events.append(dict(envelope=envelope, evidence_hex=raw.hex(), received_at=received_at,
-                               injected=injected, injection=case if injected else None))
+                               injected=injected, injection=(delivery_policy or {}).get('profile', case) if injected else None))
             if injected and case == 'replay':
                 # Retain original honest transmission; inject a duplicate afterward.
                 events[-1]['injected'] = False
