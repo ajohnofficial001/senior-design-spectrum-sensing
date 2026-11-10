@@ -13,3 +13,7 @@ See [study, results, threat model and run instructions](TRUST_STUDY.md). This ad
 ## Detector integration
 
 [Run the signed detector experiment](SIGNED_DETECTOR.md) against a fresh GNU Radio acquisition or existing spectral-feature exports. Original two-node OR behavior and reference-quality abstentions are preserved; transport and ledger receipts are simulated.
+
+## Combined reliability
+
+[Combined sensing noise and reporting stress](COMBINED_RELIABILITY.md) uses paired acquisitions and reports detection, false alarms and unavailable decisions separately.
