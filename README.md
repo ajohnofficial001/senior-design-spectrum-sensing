@@ -4,7 +4,7 @@ Collaborative engineering repository for GNU Radio spectrum sensing, with planne
 
 ## Project status
 
-Status as of November 9, 2026. A completed simulation is not evidence of RF performance.
+Status as of November 10, 2026. A completed simulation is not evidence of RF performance.
 
 | Workstream | Status | Evidence and limitations |
 | --- | --- | --- |
@@ -12,9 +12,13 @@ Status as of November 9, 2026. A completed simulation is not evidence of RF perf
 | GNU Radio transmitter | Existing implementation preserved | [Flowgraph](transmitter/primary_tx.grc) and [generated Python](transmitter/primary_tx.py); hardware operation has not been validated by this repository update. |
 | Receiver and RF validation | Pending | Receiver implementation, calibration, captured RF data and measured detection performance remain to be documented and validated. |
 | Standalone detection algorithms | Pending | Extract reusable detector code and compare it with the completed simulation. |
-| Cooperative sensing | Pending | Node reports, fusion rules and multi-node evaluation are planned. |
+| Cooperative sensing | Software protocol pilot executed | [Signed-report and timing study](cooperative_sensing/TRUST_STUDY.md): five virtual identities, 60 synthetic-trace runs; GNU Radio report integration and RF validation pending. |
 | Blockchain integration | Pending | Contracts, off-chain interface, deployment and end-to-end verification are planned. |
-| Automated engineering tests | Partial — Python/NumPy behavioral tests | Five simulation-block tests exist; GNU Radio scheduling/FIR integration and CI remain unverified. |
+| Automated engineering tests | 46 tests passed in authoring environment | Behavioral, experiment-runner and signed-report checks; GNU Radio scheduling/FIR integration and Windows execution remain unverified. |
+
+## Report integrity and health pilot
+
+The [trust-layer study](cooperative_sensing/TRUST_STUDY.md) adds real Ed25519 signatures, replay protection, explicit key rotation, timing warnings, quorum fusion and simulated ten-second audit commitments. The [executed pilot metrics](experiments/trust_protocol_pilot/summary.json) include honest delays and majority collusion. Timing warnings do not prove malicious behavior; authenticated fabricated observations can pass verification. No real blockchain is deployed.
 
 ## Full software-only model
 

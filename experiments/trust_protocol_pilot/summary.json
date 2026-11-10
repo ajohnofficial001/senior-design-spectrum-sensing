@@ -1,0 +1,2218 @@
+{
+  "completed": true,
+  "runs": [
+    {
+      "case": "control",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "control",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "control",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "control",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "control",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "honest_jitter",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 9,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "honest_jitter",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 1
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 13,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "honest_jitter",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 17,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "honest_jitter",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 10,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "honest_jitter",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 10,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "honest_cpu_delay",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 20,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "honest_cpu_delay",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 20,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "honest_cpu_delay",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 20,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "honest_cpu_delay",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 20,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "honest_cpu_delay",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 20,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "node_outage",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1885,
+          "outage_warning_ticks": 77,
+          "outage_monitor_ticks": 80,
+          "first_outage_warning_delay": 0.75
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1885,
+          "outage_warning_ticks": 71,
+          "outage_monitor_ticks": 80,
+          "first_outage_warning_delay": 2.25
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "node_outage",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1885,
+          "outage_warning_ticks": 77,
+          "outage_monitor_ticks": 80,
+          "first_outage_warning_delay": 0.75
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1885,
+          "outage_warning_ticks": 71,
+          "outage_monitor_ticks": 80,
+          "first_outage_warning_delay": 2.25
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "node_outage",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1885,
+          "outage_warning_ticks": 77,
+          "outage_monitor_ticks": 80,
+          "first_outage_warning_delay": 0.75
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1885,
+          "outage_warning_ticks": 71,
+          "outage_monitor_ticks": 80,
+          "first_outage_warning_delay": 2.25
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "node_outage",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1885,
+          "outage_warning_ticks": 77,
+          "outage_monitor_ticks": 80,
+          "first_outage_warning_delay": 0.75
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1885,
+          "outage_warning_ticks": 71,
+          "outage_monitor_ticks": 80,
+          "first_outage_warning_delay": 2.25
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "node_outage",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1885,
+          "outage_warning_ticks": 77,
+          "outage_monitor_ticks": 80,
+          "first_outage_warning_delay": 0.75
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 1,
+          "healthy_monitor_ticks": 1885,
+          "outage_warning_ticks": 71,
+          "outage_monitor_ticks": 80,
+          "first_outage_warning_delay": 2.25
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "tampered_payload",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 78,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 72,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "tampered_payload",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 78,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 72,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "tampered_payload",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 78,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 72,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "tampered_payload",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 78,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 72,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "tampered_payload",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 78,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 72,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "replay",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "replay",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "replay",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "replay",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "replay",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "forged_signature",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 78,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 72,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "forged_signature",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 78,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 72,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "forged_signature",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 78,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 72,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "forged_signature",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 78,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 72,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "forged_signature",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 20,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 78,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 72,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "signed_fabrication",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 0,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 20,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "signed_fabrication",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 0,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 20,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "signed_fabrication",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 0,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 20,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "signed_fabrication",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 0,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 20,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "signed_fabrication",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 20,
+        "rejected_attack_reports": 0,
+        "honest_reports": 480,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 20,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "majority_collusion",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 60,
+        "rejected_attack_reports": 0,
+        "honest_reports": 440,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 20,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 40
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "majority_collusion",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 60,
+        "rejected_attack_reports": 0,
+        "honest_reports": 440,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 20,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 40
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "majority_collusion",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 60,
+        "rejected_attack_reports": 0,
+        "honest_reports": 440,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 20,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 40
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "majority_collusion",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 60,
+        "rejected_attack_reports": 0,
+        "honest_reports": 440,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 20,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 40
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "majority_collusion",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 60,
+        "rejected_attack_reports": 0,
+        "honest_reports": 440,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 20,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 40
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "ledger_delay",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 15.0
+    },
+    {
+      "case": "ledger_delay",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 15.0
+    },
+    {
+      "case": "ledger_delay",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 15.0
+    },
+    {
+      "case": "ledger_delay",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 15.0
+    },
+    {
+      "case": "ledger_delay",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": null,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 15.0
+    },
+    {
+      "case": "authorized_key_rotation",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": 150,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "authorized_key_rotation",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": 150,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "authorized_key_rotation",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": 150,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "authorized_key_rotation",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": 150,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "authorized_key_rotation",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 0,
+        "rejected_attack_reports": 0,
+        "honest_reports": 500,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 0,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": 150,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "revoked_key",
+      "seed": 120001,
+      "integrity": {
+        "attack_reports": 50,
+        "rejected_attack_reports": 50,
+        "honest_reports": 450,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 194,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 188,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": 150,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "revoked_key",
+      "seed": 121001,
+      "integrity": {
+        "attack_reports": 50,
+        "rejected_attack_reports": 50,
+        "honest_reports": 450,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 194,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 188,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": 150,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "revoked_key",
+      "seed": 122001,
+      "integrity": {
+        "attack_reports": 50,
+        "rejected_attack_reports": 50,
+        "honest_reports": 450,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 194,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 188,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": 150,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "revoked_key",
+      "seed": 123001,
+      "integrity": {
+        "attack_reports": 50,
+        "rejected_attack_reports": 50,
+        "honest_reports": 450,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 194,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 188,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": 150,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    },
+    {
+      "case": "revoked_key",
+      "seed": 124001,
+      "integrity": {
+        "attack_reports": 50,
+        "rejected_attack_reports": 50,
+        "honest_reports": 450,
+        "rejected_honest_reports": 0
+      },
+      "health": {
+        "phi_style": {
+          "false_warning_ticks": 194,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        },
+        "fixed_3s": {
+          "false_warning_ticks": 188,
+          "healthy_monitor_ticks": 1965,
+          "outage_warning_ticks": 0,
+          "outage_monitor_ticks": 0,
+          "first_outage_warning_delay": null
+        }
+      },
+      "fusion": {
+        "evaluated_epochs": 100,
+        "errors": 0,
+        "no_decision": 0,
+        "disagreements_on_injected": 0,
+        "disagreements_on_honest": 0
+      },
+      "rotation_at": 150,
+      "processing_warnings": 0,
+      "simulated_ledger_delay": 1.0
+    }
+  ],
+  "plan": {
+    "status": "completed",
+    "cases": [
+      "control",
+      "honest_jitter",
+      "honest_cpu_delay",
+      "node_outage",
+      "tampered_payload",
+      "replay",
+      "forged_signature",
+      "signed_fabrication",
+      "majority_collusion",
+      "ledger_delay",
+      "authorized_key_rotation",
+      "revoked_key"
+    ],
+    "test_seeds": [
+      120001,
+      121001,
+      122001,
+      123001,
+      124001
+    ],
+    "training_seed_range": [
+      110001,
+      110300
+    ],
+    "monitor_mean": 0.9997272824606953,
+    "monitor_std": 0.1,
+    "phi_threshold": 3.0,
+    "acceptable_pause": 0.2,
+    "fixed_timeout": 3.0,
+    "sampling_tick_seconds": 0.25,
+    "node_count": 5,
+    "expected_interval": 1.0,
+    "time_model": "Single simulated receiver clock; no wall-clock prediction",
+    "ledger_mode": "LOCAL_SIMULATOR_NOT_BLOCKCHAIN"
+  },
+  "limitations": [
+    "Synthetic protocol traces, not GNU Radio-derived reports or measured network traffic",
+    "Real Ed25519 signatures; ephemeral private keys remain in memory only",
+    "Authorized registry/session/configuration and common simulated time are trusted",
+    "Signed fabrication can pass integrity checks; evidence hashes do not prove RF truth",
+    "Majority collusion can defeat fusion and flag honest minorities",
+    "Phi-style model uses frozen independently calibrated timing, not adaptive Pekko code",
+    "Health warnings indicate unusual availability, not malicious intent or future prediction",
+    "Receipts and batching are simulated; no smart contract or blockchain deployment"
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "cryptography": "50.0.0",
+    "date": "2026-11-10"
+  }
+}

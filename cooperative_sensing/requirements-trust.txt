@@ -1,0 +1,2 @@
+# Tested with Python 3.11 and this version. No GNU Radio required for this study.
+cryptography==50.0.0
