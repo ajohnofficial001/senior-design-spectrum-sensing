@@ -1,9 +1,9 @@
 # Documentation
 
-- [Setup](SETUP.md): current environment requirements and transmitter entry points.
-- [Architecture](ARCHITECTURE.md): intended subsystem boundaries and pending interfaces.
-- [Validation](VALIDATION.md): separate simulation, RF and integration evidence.
-- [Roadmap](../ROADMAP.md): work stages and exit criteria.
-- [Contributing](../CONTRIBUTING.md): team workflow.
-
-Add design decisions, meeting outcomes, reports and presentation sources here. Each decision should include context, alternatives, rationale, owner and date. Do not describe proposed architecture as implemented behavior.
+- [Architecture](ARCHITECTURE.md): GNU Radio and Python boundaries, current policy and limits.
+- [Setup](SETUP.md) and [validation plan](VALIDATION.md).
+- [Executed combined results](../experiments/combined_reliability_2026_11/README.md).
+- [Presentation materials](presentations/README.md): deck and diagrams.
+- [Animation brief](ANIMATION_BRIEF.md): specification, not an implemented animation.
+- [References](REFERENCES.md).
+- [Roadmap](../ROADMAP.md) and [contributor workflow](../CONTRIBUTING.md).

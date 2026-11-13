@@ -1,5 +1,8 @@
 # GNU Radio detector to authenticated reports
 
+> November 13 evidence update: the team supplied completed native software acquisition/replay results. See the [executed combined study](../experiments/combined_reliability_2026_11/README.md). Earlier pending statements below describe the authoring-time verification boundary; the authoring host still has not independently run GNU Radio. RF and live blockchain remain pending.
+
+
 This adapter replays the existing two-node spectral detector's exported features through real Ed25519 report signing and verification. It uses the frozen original `reference_8000` thresholds, not the separately trained fallback. It preserves the existing policy: OR fusion only when both nodes have valid, timely reports and reliable references; otherwise abstain.
 
 ## Windows: next experiment

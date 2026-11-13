@@ -1,91 +1,88 @@
 # Senior Design: Spectrum Sensing
 
-Collaborative engineering repository for GNU Radio spectrum sensing, with planned cooperative sensing and blockchain-backed recording of sensing decisions.
+**End-to-End Hardware Validation of a Jamming-Resilient Cooperative Spectrum Sensing Framework**
 
-## Project status
+Current phase: **end-to-end software validation** using GNU Radio and Python. The project topic remains unchanged; physical RF validation and live blockchain integration are planned for the next semester.
 
-Status as of November 10, 2026. A completed simulation is not evidence of RF performance.
+## Project status — November 13, 2026
 
-| Workstream | Status | Evidence and limitations |
+| Workstream | Current evidence | Remaining work |
 | --- | --- | --- |
-| GNU Radio energy-detection simulation | Completed — team reported | [Flowgraph and generated Python](simulation/README.md) imported from the team archive; settings documented. Independent reproduction, labeled plots and run records remain pending. |
-| GNU Radio transmitter | Existing implementation preserved | [Flowgraph](transmitter/primary_tx.grc) and [generated Python](transmitter/primary_tx.py); hardware operation has not been validated by this repository update. |
-| Receiver and RF validation | Pending | Receiver implementation, calibration, captured RF data and measured detection performance remain to be documented and validated. |
-| Standalone detection algorithms | Pending | Extract reusable detector code and compare it with the completed simulation. |
-| Cooperative sensing | Software protocol pilot executed | [Signed-report and timing study](cooperative_sensing/TRUST_STUDY.md): five virtual identities, 60 synthetic-trace runs; GNU Radio report integration and RF validation pending. |
-| Blockchain integration | Pending | Contracts, off-chain interface, deployment and end-to-end verification are planned. |
-| Automated engineering tests | 56 tests passed in authoring environment | Behavioral, experiment-runner and signed-report checks; GNU Radio scheduling/FIR integration and Windows execution remain unverified. |
+| GNU Radio simulation | Preserved energy-detection baseline; two virtual receivers and native software acquisitions | Independent reproduction from a fresh checkout and broader channel models |
+| Noise-aware detection | Calibrated reference-band detector; frozen 8,000-sample thresholds evaluated with held-out seeds | Wider noise/interference conditions and measured RF calibration |
+| Signed cooperative reports | Ed25519 validation, report-fault experiments and two-node OR integration | Measured network timing and physical multi-node operation |
+| Combined reliability | 50 completed evaluations: two noise conditions × five reporting profiles × five seeds | Improve availability and evaluate alternatives without retuning on test data |
+| Local audit ledger | Local hash-linked records and simulated batch receipts | Smart contracts, deployment and verified blockchain transactions |
+| RF hardware | Existing transmitter files preserved | Receiver calibration and repeatable RF trials |
+| Automated checks | 56 behavioral/protocol tests passed in the documentation authoring environment | Tests do not substitute for GNU Radio, Windows or RF execution |
 
-## Combined reliability experiment
+## Verified software results
 
-The [combined reliability study](cooperative_sensing/COMBINED_RELIABILITY.md) crosses normal/high noise with clean reporting, random loss, burst delay, a node outage and their combination. Five seeds produce 50 paired evaluations with explicit decision availability. Run `simulation/RUN_COMBINED_RELIABILITY_WINDOWS.bat`; native results remain pending.
+[Published run records and full metric definitions](experiments/combined_reliability_2026_11/README.md)
 
-## Signed detector integration
+| High-noise result | Clean reports | Combined reporting faults |
+| --- | ---: | ---: |
+| Detected occupied frames | 983 | 361 |
+| Missed occupied frames | 17 | 7 |
+| Occupied frames without a decision | 0 | 632 |
+| Detection among occupied frames with a decision | 98.3% | 98.1% |
+| Detected fraction of all occupied frames | 98.3% | 36.1% |
+| Overall decision availability | 100% | 39.8% |
 
-The [signed detector adapter](cooperative_sensing/SIGNED_DETECTOR.md) connects exported GNU Radio spectral features to authenticated reports using the frozen original thresholds and two-node OR policy. It compares clean, altered, replayed, delayed and missing reports. Run `simulation/RUN_SIGNED_DETECTOR_WINDOWS.bat` on the team laptop, or follow the prompt commands in the guide. Numerical integration tests pass; native acquisition and Windows execution remain pending.
+Each column contains 1,000 occupied and 1,000 unoccupied frames, pooled over five seeds. High noise scales I/Q standard deviation by 1.2. Clean false-alarm rate is 3.6%. High conditional detection does not mean reliable service when many frames receive no decision. These are software results with simulated transport, not RF performance or measured network latency.
 
-## Report integrity and health pilot
+## Architecture
 
-The [trust-layer study](cooperative_sensing/TRUST_STUDY.md) adds real Ed25519 signatures, replay protection, explicit key rotation, timing warnings, quorum fusion and simulated ten-second audit commitments. The [executed pilot metrics](experiments/trust_protocol_pilot/summary.json) include honest delays and majority collusion. Timing warnings do not prove malicious behavior; authenticated fabricated observations can pass verification. No real blockchain is deployed.
+![Software simulation architecture](documentation/assets/software_simulation_architecture.png)
 
-## Full software-only model
+GNU Radio models the signal/channel and two sensing nodes. Python handles noise-aware detection, signed reports, validation, cooperative fusion and local audit records. Both usable reports are required for OR fusion; missing or rejected reports produce **no decision**, not signal absent. [Architecture and limitations](documentation/ARCHITECTURE.md).
 
-A new [full_simulation.grc](simulation/full_simulation.grc) extends the preserved baseline with two noisy sensing nodes, wanted-signal on/off scenarios, out-of-band interference, OR/AND fusion, metrics and a local mock ledger. See the [run guide and limitations](simulation/FULL_SIMULATION.md). Five Python/NumPy behavioral tests pass; GNU Radio compilation and runtime verification remain pending. This model does not constitute RF validation or actual blockchain integration.
+## Run the experiments
 
-## Intended system
+Clone this repository and use the Python environment that contains GNU Radio. On the team's Windows setup, ordinary PowerShell `python` may point outside Radioconda.
 
-The planned pipeline is: controlled transmitter → SDR receiver → local energy detector → cooperative fusion → off-chain submission → blockchain record. The completed simulation covers energy detection in a simulated environment; it does not establish completion of this entire pipeline.
+```powershell
+& "$env:USERPROFILE\radioconda\python.exe" -c "from gnuradio import gr; print(gr.version())"
+& "$env:USERPROFILE\radioconda\python.exe" -m pip install -r cooperative_sensing/requirements-trust.txt
+& "$env:USERPROFILE\radioconda\python.exe" -u cooperative_sensing/run_combined_reliability.py
+```
 
-For complex samples, a proposed reusable energy statistic is the mean squared magnitude over a window: E = sum(|x[n]|²) / N. A threshold produces an occupancy decision. The imported flowgraph uses a 1,000-sample moving mean of squared magnitude, scaled by 1,000,000, with threshold 0.05 on the filtered branch. See [simulation settings](simulation/README.md); threshold calibration remains pending. Energy detection indicates occupancy; it does not by itself identify an interferer or prove malicious activity.
+Alternatively run `simulation/RUN_COMBINED_RELIABILITY_WINDOWS.bat`. Use `--cycles 5` only for a labeled smoke run; the published matrix uses 50 cycles.
+
+- [Simulation baseline and setup](simulation/README.md)
+- [Full simulation](simulation/FULL_SIMULATION.md)
+- [Signed detector integration](cooperative_sensing/SIGNED_DETECTOR.md)
+- [Combined reliability method](cooperative_sensing/COMBINED_RELIABILITY.md)
+- [Separate five-node trust pilot](cooperative_sensing/TRUST_STUDY.md)
+- [Tests](tests/README.md)
 
 ## Repository map
 
-| Path | Purpose |
+| Folder | Purpose |
 | --- | --- |
-| [transmitter/](transmitter/README.md) | Preserved GNU Radio transmitter source and generated Python |
-| [receiver/](receiver/README.md) | Planned RF acquisition and receiver flowgraphs |
-| [simulation/](simulation/README.md) | Archive and reproduce the completed energy-detection simulation |
-| [detection_algorithms/](detection_algorithms/README.md) | Planned reusable detectors, calibration and evaluation |
-| [cooperative_sensing/](cooperative_sensing/README.md) | Planned sensing-node messages and fusion |
-| [blockchain/](blockchain/README.md) | Planned contracts and off-chain integration |
-| [experiments/](experiments/README.md) | Experiment plans, metadata and reviewed results |
-| [documentation/](documentation/README.md) | Architecture, setup, decisions and evidence |
-| [tests/](tests/README.md) | Verification plan and future automated tests |
+| `transmitter/` | Preserved GNU Radio hardware transmitter |
+| `receiver/` | Planned physical RF acquisition |
+| `simulation/` | GNU Radio models, calibration and experiment runners |
+| `detection_algorithms/` | Detection and evaluation workstream |
+| `cooperative_sensing/` | Signed reports, fusion and reliability experiments |
+| `blockchain/` | Future chain integration workstream |
+| `experiments/` | Experiment plans and reviewed evidence |
+| `documentation/` | Architecture, setup, presentation assets and animation brief |
+| `tests/` | Behavioral, protocol and runner checks |
 
-## Getting started
+## Presentation and research materials
 
-1. Clone the repository and enter its directory:
-   ```bash
-   git clone https://github.com/ajohnofficial001/senior-design-spectrum-sensing.git
-   cd senior-design-spectrum-sensing
-   ```
-2. Read the [setup guide](documentation/SETUP.md) and [validation plan](documentation/VALIDATION.md).
-3. For transmitter work, inspect the flowgraph in GNU Radio Companion:
-   ```bash
-   gnuradio-companion transmitter/primary_tx.grc
-   ```
-4. Review the device URI and RF configuration before executing it. Running the flowgraph or Python script starts the hardware transmitter. The [transmitter guide](transmitter/README.md) explains dependencies and current settings.
-
-See [simulation run instructions](simulation/README.md) for the imported software-only flowgraph. Independent runtime reproduction is still pending. No hardware receiver, deployed cooperative service or blockchain deployment is available. Behavioral test instructions are in the full simulation guide.
+- [Progress deck, diagrams and asset notes](documentation/presentations/README.md)
+- [2D animation brief for Claude](documentation/ANIMATION_BRIEF.md)
+- [Reference list](documentation/REFERENCES.md)
+- [Roadmap through April](ROADMAP.md)
 
 ## Reproducible engineering
 
-Every reported result should identify the commit, environment, configuration, input source, run procedure and raw-data reference. Distinguish simulated data from measured RF data. Record detection probability, false-alarm probability and latency only when supported by labeled trials and a defined measurement method. Do not infer RF performance from simulation plots.
+Record the source commit, environment, configuration, sample origin, seeds, detector policy and metric denominators. Keep full acquisition/audit folders outside Git when large; retain their hashes and evidence references. Never commit private keys, credentials or wallet secrets. A signature or ledger entry cannot prove a sensed observation is true. Energy detection alone does not identify malicious jamming.
 
-Use the [experiment template](experiments/TEMPLATE.md), [contributor guidelines](CONTRIBUTING.md) and [roadmap](ROADMAP.md). Proposed work should enter through an issue and feature-branch pull request. Keep credentials, wallet keys, local device settings and large captures out of Git.
+Changes use feature branches and pull requests. See [CONTRIBUTING.md](CONTRIBUTING.md) and the [validation plan](documentation/VALIDATION.md).
 
 ## License
 
 The existing generated transmitter Python file carries an SPDX GPL-3.0 notice, which is preserved. No repository-wide license has been selected; contributors should agree on licensing before redistribution of new project material.
-
-
-## Development checklist
-
-Before reporting a spectrum-sensing result, record:
-- the source of the samples (simulation or measured RF);
-- center frequency, sample rate and gain settings;
-- detector window length and threshold method;
-- the commit or configuration used to produce the result; and
-- the metric or observation used to evaluate performance.
-
-This checklist helps keep simulation results, measured RF results and future cooperative-sensing experiments reproducible and clearly separated.
