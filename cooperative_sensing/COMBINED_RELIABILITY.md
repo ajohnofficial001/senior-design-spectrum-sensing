@@ -1,5 +1,8 @@
 # Combined sensing and reporting reliability study
 
+> November 13 evidence update: the team supplied completed native software acquisition/replay results. See the [executed combined study](../experiments/combined_reliability_2026_11/README.md). Earlier pending statements below describe the authoring-time verification boundary; the authoring host still has not independently run GNU Radio. RF and live blockchain remain pending.
+
+
 Question: under higher sensing noise and communication problems together, does the system still produce useful decisions, or does apparent accuracy come from abstaining?
 
 ## Run on the team Windows laptop

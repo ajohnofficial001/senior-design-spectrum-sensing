@@ -1,54 +1,45 @@
-# Project roadmap
+# Project roadmap through April 2027
 
-This is a dependency-based plan; owners and dates should be assigned in team issues. Checkboxes distinguish existing work from pending deliverables.
+The official hardware-validation topic remains unchanged. This semester establishes a software baseline; the next semester evaluates the physical system. Dates below are proposed milestones, dependent on lab access and integration progress.
 
-## 1. Preserve and document the baseline
+## Fall 2026 — software baseline
 
-- [x] Preserve existing GNU Radio transmitter flowgraph and generated Python.
-- [x] Establish subsystem folders, contributor workflow and experiment documentation.
-- [x] GNU Radio energy-detection simulation completed (team reported).
-- [x] Import simulation flowgraph and generated code; document settings and archive checksums.
-- [ ] Add labeled simulation plots and an executed run record.
-- [x] Record source GNU Radio version and simulation launch procedure.
-- [ ] Verify the documented procedure on the team environment and record all dependency versions.
-- [ ] Have another teammate reproduce the simulation and attach a run record.
+- [x] Preserve GNU Radio transmitter and imported energy-detection baseline.
+- [x] Implement two-node software acquisition and reference-band detection.
+- [x] Calibrate and freeze detector thresholds before held-out evaluation.
+- [x] Implement signed reports, validation and two-node fusion.
+- [x] Execute the native software combined reliability matrix: 50 evaluations across five source seeds.
+- [x] Publish summaries, denominator-aware metrics, architecture diagrams and presentation materials.
+- [x] Specify a 2D animation for presenting the experiments.
+- [ ] Implement and verify the animation; insert final diagrams into the progress-deck placeholders.
+- [ ] Independently reproduce from a fresh checkout; archive complete acquisitions/audits and environment manifest.
 
-Exit evidence: a fresh checkout can reproduce the documented simulation. This gate does not imply RF validation.
+Evidence: [executed study](experiments/combined_reliability_2026_11/README.md). The same-seed rerun demonstrates repeatability, not additional independent trials.
 
-## 2. Validate local sensing with RF hardware
+## January 2027 — hardware setup and calibration
 
-- [ ] Confirm device discovery and implement/document the receiver.
-- [ ] Establish noise-only baseline and threshold calibration.
-- [ ] Run controlled signal-absent and signal-present trials.
-- [ ] Sweep relevant signal levels and detector settings with repeated labeled trials.
-- [ ] Measure detection probability, false-alarm probability and latency; report uncertainty and limitations.
+- [ ] Reconnect/discover SDRs and document receiver acquisition.
+- [ ] Measure noise, gains, sample-clock behavior and benign report timing.
+- [ ] Establish RF calibration and traceable labeled captures.
 
-Exit evidence: reviewed RF experiment records, configuration, raw-data references and measured results. RF validation remains pending.
+## February — controlled RF evaluation
 
-## 3. Build cooperative sensing
+- [ ] Run repeatable signal ON/OFF and controlled interference trials.
+- [ ] Evaluate detection, false alarms, sensitivity and limitations over repeated runs.
+- [ ] Compare RF results with software assumptions; retain separate evidence labels.
 
-- [ ] Define versioned node-report schema, identifiers, units and timestamps.
-- [ ] Implement and compare candidate fusion rules.
-- [ ] Test missing, delayed, duplicated and inconsistent node reports.
-- [ ] Evaluate multi-node results against local detector baselines.
+## March — cooperative RF and ledger integration
 
-Exit evidence: reproducible multi-node trials with recorded inputs and fusion outputs.
+- [ ] Compare the strict two-report policy with explicitly specified alternatives; use fresh evaluation seeds/data.
+- [ ] Measure missing/delayed reports and availability, not only conditional detection.
+- [ ] Select blockchain platform and record schema; implement permissions, duplicate handling and retry behavior.
+- [ ] Deploy to a development network and verify stored commitments against transaction receipts and off-chain evidence.
 
-## 4. Integrate blockchain
+## April — integrated validation and handoff
 
-- [ ] Select chain/tooling and document the rationale.
-- [ ] Define on-chain fields, access rules and off-chain data references.
-- [ ] Implement contract and off-chain submission interface.
-- [ ] Test authorization, invalid submissions, duplicate handling and transaction failure/retry.
-- [ ] Deploy to a development/test network and verify sensing records against transaction receipts.
+- [ ] Evaluate the physical RF → detection → signed reporting → fusion → ledger path.
+- [ ] Report accuracy, availability, measured latency and uncertainties.
+- [ ] Document signed fabrication/collusion risks and limits of timing-based warnings.
+- [ ] Finalize presentation, report, reproducible demo and reviewed release.
 
-Exit evidence: documented contract tests, deployment configuration without secrets and end-to-end traceability. Blockchain integration remains pending.
-
-## 5. Complete system evaluation and handoff
-
-- [ ] Verify the RF-to-detection-to-fusion-to-ledger path.
-- [ ] Compare simulation and RF results without conflating their evidence.
-- [ ] Document limitations, reproducible demo, final report and presentation.
-- [ ] Tag a reviewed release and archive the environment and evidence.
-
-Schedule and scope changes belong in team issues and this roadmap.
+Hardware RF performance, calibrated timing, deployed blockchain and future-fault prediction remain unvalidated. Update this roadmap through feature branches and pull requests; never infer completed milestones from planned dates.

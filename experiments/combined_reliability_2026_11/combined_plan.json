@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "cycles": 50,
+  "seeds": [
+    160001,
+    161001,
+    162001,
+    163001,
+    164001
+  ],
+  "conditions": {
+    "normal": {},
+    "high_noise": {
+      "noise_factor": 1.2
+    }
+  },
+  "profiles": [
+    "clean",
+    "loss_20pct",
+    "burst_delay",
+    "node_outage",
+    "combined"
+  ],
+  "native_acquisition": true,
+  "noise_definition": "noise_factor 1.2 scales I/Q standard deviation, not variance or dB",
+  "transport_seed_offset": 1000000,
+  "freshness_seconds": 0.012,
+  "policy": "Frozen original 8000-sample detector, two-node OR, require both usable reports",
+  "injection_policy": "Independent 20% loss per report; node 0 20 ms delay on frames 10..19 modulo 40; node 0 absent middle 20% of frames",
+  "limitations": [
+    "Software-only sensing; no RF validation",
+    "Simulated transport/common sample clock and local batch receipts",
+    "Strict increasing sequence policy; legitimate delayed reports can be rejected",
+    "No timing calibration or deployed blockchain; frame observations are not independent trials"
+  ]
+}

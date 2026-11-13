@@ -1,5 +1,7 @@
 # Cooperative sensing
 
+Current software status and evidence: [executed 50-evaluation combined reliability study](../experiments/combined_reliability_2026_11/README.md). See the [root README](../README.md) for November 13 status and remaining RF/blockchain work.
+
 **Pending.**
 
 Define a versioned report interface before implementation: node ID, observation time and clock basis, channel/frequency, sample rate, observation window, statistic and units, threshold, decision and configuration reference.

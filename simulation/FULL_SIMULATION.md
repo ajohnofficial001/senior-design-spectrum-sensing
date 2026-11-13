@@ -1,5 +1,8 @@
 # Full software-only simulation
 
+> November 13 evidence update: the team supplied completed native software acquisition/replay results. See the [executed combined study](../experiments/combined_reliability_2026_11/README.md). Earlier pending statements below describe the authoring-time verification boundary; the authoring host still has not independently run GNU Radio. RF and live blockchain remain pending.
+
+
 Open [full_simulation.grc](full_simulation.grc) in GNU Radio Companion 3.10.12.0. This is a new finite simulation based on [senior_flowchart.grc](senior_flowchart.grc); the original baseline and transmitter remain unchanged.
 
 ## What is simulated
